@@ -19,8 +19,10 @@
         configuration="silly_content.cfg"
         /> 
 
+<!--
     <utility
         component="collective.transmogrifier.sections.tests.PrettyPrinter"
         name="print" />
+-->
 
 </configure>
