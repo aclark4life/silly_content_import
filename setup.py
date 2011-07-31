@@ -7,5 +7,6 @@ setup(
     install_requires=[
         'plone.app.transmogrifier',
         'transmogrify.filesystem',
+        'transmogrify.print',
     ]
 )
