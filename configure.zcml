@@ -1,0 +1,26 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:transmogrifier="http://namespaces.plone.org/transmogrifier">
+   
+    <include package="collective.transmogrifier" file="meta.zcml" />
+    <include package="plone.app.transmogrifier" />
+    <include package="transmogrify.filesystem" /> 
+
+    <browser:page
+        name="migrate"
+        class="migrate.Migrate"
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        permission="zope2.View"
+        />
+
+    <transmogrifier:registerConfig
+        name="silly_content"
+        configuration="silly_content.cfg"
+        /> 
+
+    <utility
+        component="collective.transmogrifier.sections.tests.PrettyPrinter"
+        name="print" />
+
+</configure>
